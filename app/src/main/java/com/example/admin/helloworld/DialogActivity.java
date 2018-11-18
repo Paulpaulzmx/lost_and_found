@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class DialogActivity extends AppCompatActivity {
 
-    private Button mBtnDialog1,mBtnDialog2,mBtnDialog3,mBtnDialog4;
+    private Button mBtnDialog1, mBtnDialog2, mBtnDialog3, mBtnDialog4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,22 +28,20 @@ public class DialogActivity extends AppCompatActivity {
         mBtnDialog4.setOnClickListener(onClick);
 
 
-
-
     }
 
-    class OnClick implements View.OnClickListener{
-        public void onClick(View v){
-            switch (v.getId()){
+    class OnClick implements View.OnClickListener {
+        public void onClick(View v) {
+            switch (v.getId()) {
                 case R.id.btn_dialog1:
                     AlertDialog.Builder builer = new AlertDialog.Builder(DialogActivity.this);
                     builer.setTitle("请回答").setMessage("你觉得怎么样啊？？？")
-                    .setPositiveButton("可以", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            Toast.makeText(DialogActivity.this, "你很真的", Toast.LENGTH_SHORT).show();
-                        }
-                    }).setNeutralButton("还行", new DialogInterface.OnClickListener() {
+                            .setPositiveButton("可以", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Toast.makeText(DialogActivity.this, "你很真的", Toast.LENGTH_SHORT).show();
+                                }
+                            }).setNeutralButton("还行", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
 

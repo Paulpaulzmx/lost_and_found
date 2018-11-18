@@ -22,83 +22,84 @@ public class MainActivity extends AppCompatActivity {
     private Button mButton7;
     private Button mButton8;
     private Button mButton9;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mButton1= findViewById(R.id.btn_1);
-        mButton1.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Intent intent = new Intent(MainActivity.this,EditTextActivity.class);
+        mButton1 = findViewById(R.id.btn_1);
+        mButton1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, EditTextActivity.class);
                 startActivity(intent);
             }
         });
         mButton2 = findViewById(R.id.btn_2);
-        mButton2.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Intent intent = new Intent(MainActivity.this,ImageActivity.class);
+        mButton2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ImageActivity.class);
                 startActivity(intent);
             }
         });
         mButton3 = findViewById(R.id.btn_3);
-        mButton3.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Intent intent = new Intent(MainActivity.this,ListViewActivity.class);
+        mButton3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ListViewActivity.class);
                 startActivity(intent);
             }
         });
         mButton4 = findViewById(R.id.btn_4);
-        mButton4.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
+        mButton4.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, GridViewActivity.class);
                 startActivity(intent);
             }
         });
 
         mButton5 = findViewById(R.id.btn_5);
-        mButton5.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Intent intent = new Intent(MainActivity.this,WebViewActivity.class);
+        mButton5.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, WebViewActivity.class);
                 startActivity(intent);
             }
         });
 
-        mButton6= findViewById(R.id.btn_6);
-        mButton6.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Intent intent = new Intent(MainActivity.this,RecyclerViewActivity.class);
+        mButton6 = findViewById(R.id.btn_6);
+        mButton6.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, RecyclerViewActivity.class);
                 startActivity(intent);
             }
         });
 
-        mButton7= findViewById(R.id.view_1);
-        mButton7.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Intent intent = new Intent(MainActivity.this,ToastActivity.class);
+        mButton7 = findViewById(R.id.view_1);
+        mButton7.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ToastActivity.class);
                 startActivity(intent);
             }
         });
 
-        mButton8= findViewById(R.id.view_2);
-        mButton8.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Intent intent = new Intent(MainActivity.this,DialogActivity.class);
+        mButton8 = findViewById(R.id.view_2);
+        mButton8.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, DialogActivity.class);
                 startActivity(intent);
             }
         });
 
-        mButton9= findViewById(R.id.btn_7);
-        mButton9.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Intent intent = new Intent(MainActivity.this,ContainerActivity.class);
+        mButton9 = findViewById(R.id.btn_7);
+        mButton9.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ContainerActivity.class);
                 startActivity(intent);
             }
         });
 
-        mButton9= findViewById(R.id.btn_8);
-        mButton9.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Intent intent = new Intent(MainActivity.this,uiwuActivity.class);
+        mButton9 = findViewById(R.id.btn_8);
+        mButton9.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, uiwuActivity.class);
                 startActivity(intent);
             }
         });

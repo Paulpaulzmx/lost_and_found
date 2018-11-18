@@ -26,7 +26,7 @@ public class DFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.activity_listview,container,false);
+        View view = inflater.inflate(R.layout.activity_listview, container, false);
         return view;
     }
 
@@ -35,45 +35,34 @@ public class DFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         mL1 = view.findViewById(R.id.Lv_1);
-        new Thread(){
-            public void run(){
+        new Thread() {
+            public void run() {
                 String date = PostGetUtil.SendPostRequest("id=1");
-                Message msg=new Message();
-                msg.obj=date;
-                msg.what=1;
+                Message msg = new Message();
+                msg.obj = date;
+                msg.what = 1;
                 handler.sendMessage(msg);
             }
         }.start();
     }
 
 
-    public Handler handler=new Handler(){
+    public Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
-            switch (msg.what){
+            switch (msg.what) {
                 case 1:
-                    JsonJX.jsonJXDate(msg.obj.toString(),arrayList);
+                    JsonJX.jsonJXDate(msg.obj.toString(), arrayList);
                     //Toast.makeText(getContext(),"Toast我的发布"+msg.obj.toString(),Toast.LENGTH_LONG).show();
                     System.out.println(arrayList.size());
                     ShuJu shuJu = (ShuJu) arrayList.get(0);
                     System.out.println(shuJu.GetNa());
-                    mL1.setAdapter(new MyListAdapter(getActivity(),arrayList));
-
+                    mL1.setAdapter(new MyListAdapter(getActivity(), arrayList));
 
 
             }
         }
     };
-
-
-
-
-
-
-
-
-
-
 
 
 }

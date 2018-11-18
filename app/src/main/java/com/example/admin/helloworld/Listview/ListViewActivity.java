@@ -11,6 +11,7 @@ public class ListViewActivity extends Activity {
 
 
     private ListView mLv1;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

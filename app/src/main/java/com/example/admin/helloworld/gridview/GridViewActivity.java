@@ -10,6 +10,7 @@ import com.example.admin.helloworld.R;
 public class GridViewActivity extends AppCompatActivity {
 
     private GridView mGv;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

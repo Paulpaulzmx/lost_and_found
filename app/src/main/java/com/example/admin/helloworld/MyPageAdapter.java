@@ -38,5 +38,4 @@ public class MyPageAdapter extends FragmentPagerAdapter {
     }
 
 
-
 }
