@@ -114,7 +114,7 @@ public class uiwuActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // 绑定toobar跟menu
+        // 绑定toolbar跟menu
         getMenuInflater().inflate(R.menu.rightview_menu, menu);
         return true;
     }

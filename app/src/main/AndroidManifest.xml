@@ -33,7 +33,8 @@
         <activity android:name=".ContainerActivity" />
         <activity
             android:name=".uiwuActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
+        <activity android:name=".DetailsActivity"></activity>
     </application>
 
 </manifest>

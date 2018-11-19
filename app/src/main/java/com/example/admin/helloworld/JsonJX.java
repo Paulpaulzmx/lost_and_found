@@ -22,7 +22,6 @@ public class JsonJX {
                         System.out.println(name + "\nhello world  ");
                     }
                 }
-
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -40,8 +39,10 @@ public class JsonJX {
                     JSONArray resultJsonArray = jsonObject.getJSONArray("data");
                     for (int i = 0; i < resultJsonArray.length(); i++) {
                         jsonObject = resultJsonArray.getJSONObject(i);
-                        arrayList.add(new ShuJu(jsonObject.getString("loss_image"), jsonObject.getString("loss_name"), jsonObject.getString("loss_time"), jsonObject.getString("loss_address")));
-
+                        arrayList.add(new ShuJu(jsonObject.getString("loss_image"),
+                                jsonObject.getString("loss_name"),
+                                jsonObject.getString("loss_time"),
+                                jsonObject.getString("loss_address")));
                     }
                 }
             } catch (JSONException e) {
