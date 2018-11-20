@@ -1,6 +1,8 @@
 package com.example.admin.helloworld.Listview;
 
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.admin.helloworld.DetailsActivity;
 import com.example.admin.helloworld.R;
 import com.example.admin.helloworld.ShuJu;
 import com.example.admin.helloworld.fragment.DFragment;
@@ -56,8 +59,8 @@ public class MyListAdapter extends BaseAdapter implements AdapterView.OnItemClic
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Log.e("nihk" + id, "hello " + position);
-        Toast.makeText(mContext, "第" + position + "条，等待替换啊", Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(mContext,DetailsActivity.class);
+        mContext.startActivity(intent);
 
     }
 
@@ -72,7 +75,7 @@ public class MyListAdapter extends BaseAdapter implements AdapterView.OnItemClic
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHoIder hoIder = null;
         if (convertView == null) {
-            convertView = mLayoutInflater.inflate(R.layout.layout_list_item, null);
+            convertView = mLayoutInflater.inflate(R.layout.card_view, null);
             hoIder = new ViewHoIder();
             hoIder.imageView = convertView.findViewById(R.id.iv);
             hoIder.tvContent = convertView.findViewById(R.id.tv_content);

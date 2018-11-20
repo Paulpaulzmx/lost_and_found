@@ -9,7 +9,7 @@
         android:id="@+id/view_status"
         android:layout_width="match_parent"
         android:layout_height="24dp"
-        android:background="#3D11EE"
+        android:background="@color/colorPrimary"
         android:visibility="gone" />
 
 
@@ -17,7 +17,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#3D11EE"
+        android:background="@color/colorPrimary"
         app:contentInsetStart="0.0dp">
 
         <FrameLayout

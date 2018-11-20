@@ -34,7 +34,8 @@
         <activity
             android:name=".uiwuActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".DetailsActivity"></activity>
+        <activity android:name=".DetailsActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
