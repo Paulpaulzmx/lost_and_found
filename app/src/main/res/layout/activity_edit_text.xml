@@ -2,16 +2,16 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="15dp"
-    >
+    android:padding="15dp">
+
     <EditText
-    android:id="@+id/et_1"
-    android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:textSize="16sp"
-    android:textColor="#FFAD33"
-    android:hint="手机号"
-    android:inputType="number"/>
+        android:id="@+id/et_1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="16sp"
+        android:textColor="#FFAD33"
+        android:hint="手机号"
+        android:inputType="number" />
 
     <EditText
         android:id="@+id/et_2"
@@ -22,7 +22,7 @@
         android:hint="密码"
         android:inputType="textPassword"
         android:layout_below="@id/et_1"
-        android:layout_marginTop="15dp"/>
+        android:layout_marginTop="15dp" />
 
     <TextView
         android:id="@+id/tv_1"
@@ -32,7 +32,7 @@
         android:textSize="20sp"
         android:textColor="#FF00FF"
         android:layout_below="@id/et_2"
-        android:layout_marginTop="15dp"/>
+        android:layout_marginTop="15dp" />
 
     <CheckBox
         android:id="@+id/cb_1"
@@ -41,7 +41,7 @@
         android:text="Android Study Hy"
         android:textSize="20sp"
         android:layout_below="@id/tv_1"
-        android:layout_marginTop="15dp"/>
+        android:layout_marginTop="15dp" />
 
     <CheckBox
         android:id="@+id/cb_2"
@@ -50,7 +50,7 @@
         android:text="Android  one and two Study  Hy"
         android:textSize="20sp"
         android:layout_below="@id/cb_1"
-        android:layout_marginTop="15dp"/>
+        android:layout_marginTop="15dp" />
 
     <CheckBox
         android:id="@+id/cb_3"
@@ -59,7 +59,7 @@
         android:text="IOS three and two Study  Hy"
         android:textSize="20sp"
         android:layout_below="@id/cb_2"
-        android:layout_marginTop="15dp"/>
+        android:layout_marginTop="15dp" />
 
     <RadioGroup
         android:id="@+id/Rg_1"
@@ -82,7 +82,7 @@
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:text="Rose灬丶Time"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp" />
 
         <RadioButton
             android:id="@+id/Rb_3"
@@ -90,7 +90,7 @@
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:text="WzXc"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp" />
 
     </RadioGroup>
 

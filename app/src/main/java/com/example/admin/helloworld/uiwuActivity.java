@@ -26,7 +26,6 @@ import java.util.ArrayList;
 public class uiwuActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
 
-
     private TabLayout tabLayout;
     private TextView eDt;
     private ImageView imageView;
@@ -66,12 +65,10 @@ public class uiwuActivity extends AppCompatActivity implements NavigationView.On
         tabLayout.setupWithViewPager(viewPager);
 
 
-
-
         eDt = findViewById(R.id.edt_search);
-        eDt.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Intent intent = new Intent(uiwuActivity.this,WebViewActivity.class);
+        eDt.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(uiwuActivity.this, WebViewActivity.class);
                 startActivity(intent);
             }
         });
@@ -82,9 +79,9 @@ public class uiwuActivity extends AppCompatActivity implements NavigationView.On
 
 
         imageView = findViewById(R.id.iv_title_menu1);
-        imageView.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Intent intent = new Intent(uiwuActivity.this,ContainerActivity.class);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(uiwuActivity.this, ContainerActivity.class);
                 startActivity(intent);
             }
         });
@@ -107,7 +104,7 @@ public class uiwuActivity extends AppCompatActivity implements NavigationView.On
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(uiwuActivity.this,EditTextActivity.class);
+                Intent intent = new Intent(uiwuActivity.this, EditTextActivity.class);
                 startActivity(intent);
             }
         });
@@ -130,15 +127,15 @@ public class uiwuActivity extends AppCompatActivity implements NavigationView.On
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        switch (id){
+        switch (id) {
             case R.id.actionbar_wode:
-                Toast.makeText(getApplicationContext(),"Toast我的发布",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Toast我的发布", Toast.LENGTH_LONG).show();
                 break;
             case R.id.actionbar_jmyi:
-                Toast.makeText(getApplicationContext(),"Toast建议",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Toast建议", Toast.LENGTH_LONG).show();
                 break;
             case R.id.actionbar_more:
-                Toast.makeText(getApplicationContext(),"Toastgg",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Toastgg", Toast.LENGTH_LONG).show();
                 break;
         }
 
@@ -147,7 +144,7 @@ public class uiwuActivity extends AppCompatActivity implements NavigationView.On
     }
 
     public void onBackPressed() {
-         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
         } else {
@@ -160,18 +157,24 @@ public class uiwuActivity extends AppCompatActivity implements NavigationView.On
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        switch (id){
-            case R.id.pavl:Toast.makeText(getApplicationContext(),"拍照",Toast.LENGTH_LONG).show();
+        switch (id) {
+            case R.id.pavl:
+                Toast.makeText(getApplicationContext(), "拍照", Toast.LENGTH_LONG).show();
                 break;
-            case R.id.liui:Toast.makeText(getApplicationContext(),"历史",Toast.LENGTH_LONG).show();
+            case R.id.liui:
+                Toast.makeText(getApplicationContext(), "历史", Toast.LENGTH_LONG).show();
                 break;
-            case R.id.uip:Toast.makeText(getApplicationContext(),"等带替换1",Toast.LENGTH_LONG).show();
+            case R.id.uip:
+                Toast.makeText(getApplicationContext(), "等带替换1", Toast.LENGTH_LONG).show();
                 break;
-            case R.id.uevi:Toast.makeText(getApplicationContext(),"等待替换2",Toast.LENGTH_LONG).show();
+            case R.id.uevi:
+                Toast.makeText(getApplicationContext(), "等待替换2", Toast.LENGTH_LONG).show();
                 break;
-            case R.id.faxm:Toast.makeText(getApplicationContext(),"3",Toast.LENGTH_LONG).show();
+            case R.id.faxm:
+                Toast.makeText(getApplicationContext(), "3", Toast.LENGTH_LONG).show();
                 break;
-            case R.id.gryu:Toast.makeText(getApplicationContext(),"4",Toast.LENGTH_LONG).show();
+            case R.id.gryu:
+                Toast.makeText(getApplicationContext(), "4", Toast.LENGTH_LONG).show();
                 break;
         }
 
@@ -190,7 +193,6 @@ public class uiwuActivity extends AppCompatActivity implements NavigationView.On
                 break;
         }
     }
-
 
 
 }

@@ -31,7 +31,8 @@
         <activity android:name=".jump.AActivity" />
         <activity android:name=".jump.BActivity" />
         <activity android:name=".ContainerActivity" />
-        <activity android:name=".uiwuActivity"
+        <activity
+            android:name=".uiwuActivity"
             android:screenOrientation="portrait"></activity>
     </application>
 

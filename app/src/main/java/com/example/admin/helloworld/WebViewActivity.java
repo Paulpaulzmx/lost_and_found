@@ -29,7 +29,7 @@ public class WebViewActivity extends AppCompatActivity {
 
     }
 
-    class MyWebChromeClient extends WebChromeClient{
+    class MyWebChromeClient extends WebChromeClient {
         @Override
         public void onProgressChanged(WebView view, int newProgress) {
             super.onProgressChanged(view, newProgress);
@@ -43,8 +43,8 @@ public class WebViewActivity extends AppCompatActivity {
     }
 
 
-    class MyWebViewClient extends WebViewClient{
-        public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request){
+    class MyWebViewClient extends WebViewClient {
+        public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
             view.loadUrl(request.getUrl().toString());
             return true;
         }
@@ -52,20 +52,20 @@ public class WebViewActivity extends AppCompatActivity {
         @Override
         public void onPageStarted(WebView view, String url, Bitmap favicon) {
             super.onPageStarted(view, url, favicon);
-            Log.d("WebView","onPageStarted...");
+            Log.d("WebView", "onPageStarted...");
         }
 
         @Override
         public void onPageFinished(WebView view, String url) {
             super.onPageFinished(view, url);
-            Log.d("WebView","onPageFinished...");
+            Log.d("WebView", "onPageFinished...");
             mWvMain.loadUrl("javascript:alert('hello')");
         }
     }
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if(keyCode == KeyEvent.KEYCODE_BACK && mWvMain.canGoBack()){
+        if (keyCode == KeyEvent.KEYCODE_BACK && mWvMain.canGoBack()) {
             mWvMain.goBack();
             return true;
         }

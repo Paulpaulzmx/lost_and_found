@@ -17,9 +17,9 @@ public class RecyclerViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler_view);
         mBtnLinear = findViewById(R.id.btn_linear);
-        mBtnLinear.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Intent intent = new Intent(RecyclerViewActivity.this,LinearRecyclerViewActivity.class);
+        mBtnLinear.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(RecyclerViewActivity.this, LinearRecyclerViewActivity.class);
                 startActivity(intent);
             }
         });

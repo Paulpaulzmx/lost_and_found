@@ -15,10 +15,11 @@ public class MyGridViewAdapter extends BaseAdapter {
     private Context mContext;
     private LayoutInflater mLayoutInflater;
 
-    public MyGridViewAdapter(Context context){
+    public MyGridViewAdapter(Context context) {
         this.mContext = context;
         mLayoutInflater = LayoutInflater.from(context);
     }
+
     @Override
     public int getCount() {
         return 10;
@@ -34,7 +35,7 @@ public class MyGridViewAdapter extends BaseAdapter {
         return 0;
     }
 
-    static class ViewHolder{
+    static class ViewHolder {
         public ImageView imageView;
         public TextView textView;
     }
@@ -42,18 +43,17 @@ public class MyGridViewAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder = null;
-        if(convertView == null) {
-            convertView = mLayoutInflater.inflate(R.layout.layout_grid_item,null);
+        if (convertView == null) {
+            convertView = mLayoutInflater.inflate(R.layout.layout_grid_item, null);
             holder = new ViewHolder();
             holder.imageView = convertView.findViewById(R.id.iv_gridv);
             holder.textView = convertView.findViewById(R.id.iv_title);
             convertView.setTag(holder);
-        }
-            else{
-                holder = (ViewHolder) convertView.getTag();
+        } else {
+            holder = (ViewHolder) convertView.getTag();
 
-            }
-            holder.textView.setText("花啊花啊");
+        }
+        holder.textView.setText("花啊花啊");
 
 
         return convertView;

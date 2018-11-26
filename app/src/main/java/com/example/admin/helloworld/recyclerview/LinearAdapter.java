@@ -14,15 +14,17 @@ public class LinearAdapter extends RecyclerView.Adapter<LinearAdapter.LinearView
 
 
     private Context mContext;
-    public LinearAdapter(Context context){
+
+    public LinearAdapter(Context context) {
         this.mContext = context;
     }
+
     @NonNull
     @Override
     public LinearAdapter.LinearViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
 
-        return new LinearViewHolder(LayoutInflater.from(mContext).inflate(R.layout.layout_linear_item,parent,false));
+        return new LinearViewHolder(LayoutInflater.from(mContext).inflate(R.layout.layout_linear_item, parent, false));
     }
 
     @Override
@@ -37,10 +39,9 @@ public class LinearAdapter extends RecyclerView.Adapter<LinearAdapter.LinearView
     }
 
 
-    class LinearViewHolder extends RecyclerView.ViewHolder{
+    class LinearViewHolder extends RecyclerView.ViewHolder {
 
         private TextView textView;
-
 
 
         public LinearViewHolder(View itemView) {

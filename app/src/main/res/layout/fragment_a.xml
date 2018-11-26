@@ -12,6 +12,6 @@
         android:textColor="#000"
         android:textSize="20sp"
         android:text="我是某某某啊啊"
-        android:gravity="center"/>
+        android:gravity="center" />
 
 </LinearLayout>
