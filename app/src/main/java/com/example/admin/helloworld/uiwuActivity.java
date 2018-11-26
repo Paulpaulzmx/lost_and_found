@@ -1,4 +1,4 @@
-﻿package com.example.admin.helloworld;
+package com.example.admin.helloworld;
 
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
