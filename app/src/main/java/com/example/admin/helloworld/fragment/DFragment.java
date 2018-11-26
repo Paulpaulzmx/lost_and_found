@@ -1,5 +1,6 @@
 package com.example.admin.helloworld.fragment;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -34,6 +35,7 @@ public class DFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        //todo learn here 获取实际的电话数据
         mL1 = view.findViewById(R.id.Lv_1);
         new Thread() {
             public void run() {
@@ -47,6 +49,8 @@ public class DFragment extends Fragment {
     }
 
 
+
+    @SuppressLint("HandlerLeak")
     public Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -56,13 +60,10 @@ public class DFragment extends Fragment {
                     //Toast.makeText(getContext(),"Toast我的发布"+msg.obj.toString(),Toast.LENGTH_LONG).show();
                     System.out.println(arrayList.size());
                     ShuJu shuJu = (ShuJu) arrayList.get(0);
-                    System.out.println(shuJu.GetNa());
+                    System.out.println(shuJu.GetName());
                     mL1.setAdapter(new MyListAdapter(getActivity(), arrayList));
-
-
             }
         }
     };
-
 
 }

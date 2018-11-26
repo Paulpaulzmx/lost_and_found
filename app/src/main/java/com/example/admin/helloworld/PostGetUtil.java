@@ -22,14 +22,14 @@ public class PostGetUtil {
         String acceptData = "";
         HttpURLConnection conn = null;
         try {
-            String Strurl = "http://47.106.146.182/she";
-            URL url = new URL(Strurl);
+            String StrUrl = "http://47.106.146.182/she";
+            URL url = new URL(StrUrl);
             conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("POST");
             conn.setDoInput(true);
             conn.setDoOutput(true);
             conn.setUseCaches(false);
-            conn.setInstanceFollowRedirects(true); //有误重定向
+            conn.setInstanceFollowRedirects(true); //有无重定向
             conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
             OutputStream outputStream = conn.getOutputStream();
             PrintStream printStream = new PrintStream(outputStream);
@@ -97,6 +97,4 @@ public class PostGetUtil {
         }
         return acceptData;
     }
-
-
 }

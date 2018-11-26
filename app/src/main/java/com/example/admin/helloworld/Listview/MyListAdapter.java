@@ -2,24 +2,19 @@ package com.example.admin.helloworld.Listview;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.admin.helloworld.DetailsActivity;
 import com.example.admin.helloworld.R;
 import com.example.admin.helloworld.ShuJu;
-import com.example.admin.helloworld.fragment.DFragment;
 
 import java.util.ArrayList;
 
@@ -88,8 +83,8 @@ public class MyListAdapter extends BaseAdapter implements AdapterView.OnItemClic
 
         ShuJu shuJu = (ShuJu) arrayList.get(position);
         hoIder.imageView.setTag(R.id.tag_glide, position);
-        Glide.with(mContext).load(shuJu.GetTu()).into(hoIder.imageView);
-        hoIder.tvTile.setText("这是标题恩 " + shuJu.GetNa());
+        Glide.with(mContext).load(shuJu.GetPicture()).into(hoIder.imageView);
+        hoIder.tvTile.setText("这是标题恩 " + shuJu.GetName());
         hoIder.tvTime.setText(shuJu.GetTime() + " 第" + position + "条恩");
         hoIder.tvContent.setText("这是内容oa: " + shuJu.GetAddress());
         ((ListView) parent).setOnItemClickListener(this);
