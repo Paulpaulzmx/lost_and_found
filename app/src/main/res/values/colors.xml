@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#1B82D2</color>
+    <color name="colorPrimaryDark">#1B82D2</color>
+    <color name="colorAccent">#FB7691</color>
 
     <color name="colorTheme">#ffce3d3a</color>
     <!--页面背景的颜色-->
@@ -10,11 +10,19 @@
 
     <color name="colorWhite">#ffffffff</color>
 
+    <color name="colorPink">#ffdebd</color>
+
+    <color name="colorSearch">#1673B8</color>
+
+    <color name="colorBefore">#2c2c2c</color>
+
+    <color name="colorAfter">#1B82D2</color>
+
     <!--主页tab背景-->
     <color name="colorTabBg">#ffffffff</color>
-    <color name="colorTabTextCheck">#ffce3d3a</color>
+    <color name="colorTabTextCheck">#1B82D2</color>
     <color name="colorTabTextNormal">#585858</color>
-    <color name="colorTabLine">#ffce3d3a</color>
+    <color name="colorTabLine">#1673B8</color>
 
     <!--侧边栏分割线-->
     <color name="colorNavLine">#E0E0E0</color>
