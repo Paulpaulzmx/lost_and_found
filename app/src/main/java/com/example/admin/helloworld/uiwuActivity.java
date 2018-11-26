@@ -1,18 +1,28 @@
 package com.example.admin.helloworld;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.os.Build;
+import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.FileProvider;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,6 +31,10 @@ import com.example.admin.helloworld.fragment.BFragment;
 import com.example.admin.helloworld.fragment.CFragment;
 import com.example.admin.helloworld.fragment.DFragment;
 
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class uiwuActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -31,7 +45,6 @@ public class uiwuActivity extends AppCompatActivity implements NavigationView.On
     private ImageView imageView;
     private ImageView imageView1;
     private DrawerLayout drawerLayout;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,12 +113,40 @@ public class uiwuActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        //点击发布按钮，出现对话框，选择拍照或是上传图片
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(uiwuActivity.this, EditTextActivity.class);
-                startActivity(intent);
+                //新建下拉列表对话框
+                AlertDialog.Builder customizeDialog = new AlertDialog.Builder(uiwuActivity.this);
+                //自定义对话框样式，暂不需要
+//                final View dialogView = LayoutInflater.from(uiwuActivity.this)
+//                        .inflate(R.layout.dialog_customize, null);
+//                customizeDialog.setTitle("");
+//                customizeDialog.setView(dialogView);
+                final String[] items = {"拍照", "上传本地图片"};      //列表项
+                customizeDialog.setItems(items, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        switch (which) {
+                            case 0:
+                                Intent takePictureIntent = new Intent(
+                                        uiwuActivity.this,TakePhotoActivity.class);
+                                startActivity(takePictureIntent);
+                                break;
+                            case 1:
+                                //选择本地图片
+                                Intent localPictureIntent = new Intent(
+                                        uiwuActivity.this, SelectActivity.class);
+                                startActivity(localPictureIntent);
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                });
+                customizeDialog.show(); //显示对话框
             }
         });
 
@@ -114,7 +155,7 @@ public class uiwuActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // 绑定toobar跟menu
+        // 绑定toolbar跟menu
         getMenuInflater().inflate(R.menu.rightview_menu, menu);
         return true;
     }
@@ -138,8 +179,6 @@ public class uiwuActivity extends AppCompatActivity implements NavigationView.On
                 Toast.makeText(getApplicationContext(), "Toastgg", Toast.LENGTH_LONG).show();
                 break;
         }
-
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -193,6 +232,4 @@ public class uiwuActivity extends AppCompatActivity implements NavigationView.On
                 break;
         }
     }
-
-
 }

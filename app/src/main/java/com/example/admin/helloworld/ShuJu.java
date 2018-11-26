@@ -1,23 +1,22 @@
 package com.example.admin.helloworld;
 
 public class ShuJu {
-    private String tupm;
+    private String picture;
     private String name;
     private String time;
     private String address;
 
-    public ShuJu(String tupm, String name, String time, String address) {
-        this.tupm = tupm;
+    public ShuJu(String picture, String name, String time, String address) {
+        this.picture = picture;
         this.name = name;
         this.time = time;
         this.address = address;
     }
 
-    public void SetTu(String tupm) {
-        this.tupm = tupm;
+    public void SetPicture(String picture) { this.picture = picture;
     }
 
-    public void SetNa(String name) {
+    public void SetName(String name) {
         this.name = name;
     }
 
@@ -29,11 +28,11 @@ public class ShuJu {
         this.address = address;
     }
 
-    public String GetTu() {
-        return this.tupm;
+    public String GetPicture() {
+        return this.picture;
     }
 
-    public String GetNa() {
+    public String GetName() {
         return this.name;
     }
 
