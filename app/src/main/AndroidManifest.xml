@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.admin.helloworld">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/uiwu"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/uiwu"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Main2Activity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Study.EditTextActivity" />
+        <activity android:name=".Study.ImageActivity" />
+        <activity android:name=".Listview.ListViewActivity" />
+        <activity android:name=".gridview.GridViewActivity" />
+        <activity android:name=".Study.WebViewActivity" />
+        <activity android:name=".recyclerview.RecyclerViewActivity" />
+        <activity android:name=".recyclerview.LinearRecyclerViewActivity" />
+        <activity android:name=".Study.ToastActivity" />
+        <activity android:name=".Study.DialogActivity" />
+        <activity android:name=".Study.CustomDialogActivity" />
+        <activity android:name=".jump.AActivity" />
+        <activity android:name=".jump.BActivity" />
+        <activity android:name=".Study.ContainerActivity" />
+        <activity
+            android:name=".uiwuActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Study.MainActivity" />
+        <activity android:name=".PublishActivity" />
+        <activity
+            android:name=".DetailsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".fragment_course.ShopActivity" />
+        <activity android:name=".fragment_course.OrderActivity"></activity>
+    </application>
+
+</manifest>
