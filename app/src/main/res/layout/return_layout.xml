@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:id="@+id/bt_return"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:src="@drawable/icon_back"
+        android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/tv_return"
+        android:layout_marginRight="10dp"
+        android:paddingRight="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="信息提交界面"
+        android:textSize="16dp"
+        android:textColor="@color/colorWhite"
+        android:layout_weight="10000"
+        android:layout_gravity="center"
+        android:gravity="center"
+        />
+</LinearLayout>
