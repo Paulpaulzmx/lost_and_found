@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--android:checkableBehavior="single"-->
+    <group>
+        <item
+            android:id="@+id/pavl"
+            android:icon="@drawable/icon_mess"
+            android:title="我的消息" />
+        <item
+            android:id="@+id/liui"
+            android:icon="@drawable/icon_time"
+            android:title="历史记录" />
+        <item
+            android:id="@+id/uip"
+            android:icon="@drawable/icon_go"
+            android:title="发现更多" />
+        <item
+            android:id="@+id/uevi"
+            android:icon="@drawable/icon_it"
+            android:title="关于Loss" />
+        <item
+            android:id="@+id/faxm"
+            android:icon="@drawable/icon_my"
+            android:title="我的账号" />
+        <item
+            android:id="@+id/gryu"
+            android:icon="@drawable/icon_set"
+            android:title="系统设置" />
+    </group>
+
+
+</menu>
