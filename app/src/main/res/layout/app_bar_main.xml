@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:id="@+id/view_status"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:visibility="gone"
+        android:background="@color/colorPrimary"
+        />
+
+
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:contentInsetStart="0.0dp"
+
+        >
+
+        <FrameLayout
+            android:id="@+id/ll_title_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:id="@+id/iv_title_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:src="@drawable/titlebar_menu" />
+
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:id="@+id/edt_search"
+                android:layout_width="220dp"
+                android:layout_height="40dp"
+                android:background="@drawable/search_view"
+                android:drawableLeft="@drawable/actionbar_search"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:hint="搜索"
+                android:paddingLeft="12dp"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite" />
+        </FrameLayout>
+
+
+
+
+
+        <FrameLayout
+            android:id="@+id/ll_title_menu2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:paddingLeft="5dp"
+            android:paddingRight="10dp"
+            >
+
+
+            <ImageView
+                android:id="@+id/iv_title_menu1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:src="@drawable/actionbar_share" />
+
+
+        </FrameLayout>
+
+
+
+
+
+    </android.support.v7.widget.Toolbar>
+
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_gank"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        app:tabBackground="@drawable/ripple_tab_bg"
+        app:tabIndicatorColor="@color/colorTabLine"
+        app:tabSelectedTextColor="@color/colorTabTextCheck"
+        app:tabTextColor="@color/colorTabTextNormal" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_paper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            app:srcCompat="@drawable/icon_add" />
+
+    </FrameLayout>
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>
